@@ -28,7 +28,7 @@ public class NexaRiseConfiguration extends TbMqttNodeConfiguration {
     @Override
     public TbAzureIotHubNodeConfiguration defaultConfiguration() {
         TbAzureIotHubNodeConfiguration configuration = new TbAzureIotHubNodeConfiguration();
-        configuration.setTopicPattern("My Topic is Nexa");
+        configuration.setTopicPattern("My Topic is Ravi");
         configuration.setHost("http://localhost:8080");
         configuration.setPort(8080);
         configuration.setConnectTimeoutSec(10);
