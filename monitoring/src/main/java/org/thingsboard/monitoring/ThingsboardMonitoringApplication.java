@@ -16,6 +16,7 @@
 package org.thingsboard.monitoring;
 
 import lombok.extern.slf4j.Slf4j;
+import org.NexaRiseConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -46,6 +47,7 @@ public class ThingsboardMonitoringApplication {
     private int monitoringRateMs;
 
     public static void main(String[] args) {
+        System.out.println("++++"+new NexaRiseConfiguration().defaultConfiguration().getTopicPattern() +"++++++++++");
         new SpringApplicationBuilder(ThingsboardMonitoringApplication.class)
                 .properties(Map.of("spring.config.name", "tb-monitoring"))
                 .run(args);

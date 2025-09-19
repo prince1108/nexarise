@@ -5457,7 +5457,7 @@
     "tenant-required": "Leietaker er påkrevd",
     "search": "Søk etter leietakere",
     "selected-tenants": "{ count, plural, =1 {1 leietaker} other {# leietakere} } valgt",
-    "isolated-tb-rule-engine": "Bruk isolerte ThingsBoard Rule Engine-køer",
+    "isolated-tb-rule-engine": "Bruk isolerte NexaRise Rule Engine-køer",
     "isolated-tb-rule-engine-details": "Hver leietaker får dedikerte Rule Engine-køer"
   },
   "tenant-profile": {

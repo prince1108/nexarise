@@ -68,8 +68,8 @@ abstract public class AbstractAssignTest extends AbstractDriverBaseTest {
 
         userName = "User " + random();
         customerTitle = "Customer " + random();
-        userEmail = random() + "@thingsboard.org";
-        userWithNameEmail = random() + "@thingsboard.org";
+        userEmail = random() + "@nexarise.ai";
+        userWithNameEmail = random() + "@nexarise.ai";
         alarmType = "Test alarm " + random();
         assignedAlarmType = "Test assigned alarm " + random();
 

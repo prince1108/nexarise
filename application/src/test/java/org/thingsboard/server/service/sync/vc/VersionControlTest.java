@@ -141,24 +141,24 @@ public class VersionControlTest extends AbstractControllerTest {
         loginSysAdmin();
         Tenant tenant1 = new Tenant();
         tenant1.setTitle("Tenant 1");
-        tenant1.setEmail("tenant1@thingsboard.org");
+        tenant1.setEmail("tenant1@nexarise.ai");
         tenant1 = saveTenant(tenant1);
         this.tenantId1 = tenant1.getId();
         User tenantAdmin1 = new User();
         tenantAdmin1.setTenantId(tenantId1);
         tenantAdmin1.setAuthority(Authority.TENANT_ADMIN);
-        tenantAdmin1.setEmail("tenant1-admin@thingsboard.org");
+        tenantAdmin1.setEmail("tenant1-admin@nexarise.ai");
         this.tenantAdmin1 = createUser(tenantAdmin1, tenantAdmin1.getEmail());
 
         Tenant tenant2 = new Tenant();
         tenant2.setTitle("Tenant 2");
-        tenant2.setEmail("tenant2@thingsboard.org");
+        tenant2.setEmail("tenant2@nexarise.ai");
         tenant2 = saveTenant(tenant2);
         this.tenantId2 = tenant2.getId();
         User tenantAdmin2 = new User();
         tenantAdmin2.setTenantId(tenantId2);
         tenantAdmin2.setAuthority(Authority.TENANT_ADMIN);
-        tenantAdmin2.setEmail("tenant2-admin@thingsboard.org");
+        tenantAdmin2.setEmail("tenant2-admin@nexarise.ai");
         this.tenantAdmin2 = createUser(tenantAdmin2, tenantAdmin2.getEmail());
 
         this.repoKey = UUID.randomUUID().toString();

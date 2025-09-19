@@ -21,13 +21,13 @@
     <parent>
         <groupId>org.thingsboard</groupId>
         <version>4.3.0-SNAPSHOT</version>
-        <artifactId>thingsboard</artifactId>
+        <artifactId>nexarise</artifactId>
     </parent>
     <groupId>org.thingsboard</groupId>
     <artifactId>ui-ngx</artifactId>
     <packaging>jar</packaging>
 
-    <name>ThingsBoard Server UI</name>
+    <name>NexaRise Server UI</name>
     <url>https://thingsboard.io</url>
 
     <properties>

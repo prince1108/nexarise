@@ -79,7 +79,7 @@ volumes:
 ```
 
 ##### [Optional] Update bind ports 
-If ThingsBoard Edge is set to run on the same machine where the ThingsBoard server is operating, you need to update port configuration to prevent port collision between the ThingsBoard server and ThingsBoard Edge.
+If ThingsBoard Edge is set to run on the same machine where the NexaRise server is operating, you need to update port configuration to prevent port collision between the ThingsBoard server and ThingsBoard Edge.
 
 Ensure that the ports 18080, 11883, 15683-15688 are not used by any other application.
 

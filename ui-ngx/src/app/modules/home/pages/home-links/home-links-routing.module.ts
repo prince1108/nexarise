@@ -16,7 +16,7 @@
 
 import { inject, NgModule } from '@angular/core';
 import { ActivatedRouteSnapshot, ResolveFn, RouterModule, RouterStateSnapshot, Routes } from '@angular/router';
-
+import { RpcComponent } from '@home/pages/rpc/rpc.component';
 import { HomeLinksComponent } from './home-links.component';
 import { Authority } from '@shared/models/authority.enum';
 import { mergeMap, Observable, of } from 'rxjs';
@@ -126,11 +126,22 @@ const routes: Routes = [
       auth: [Authority.SYS_ADMIN, Authority.TENANT_ADMIN, Authority.CUSTOMER_USER],
       title: 'home.home',
       breadcrumb: {
-        menuId: MenuId.home
+        menuId: MenuId.home,
       }
     },
     resolve: {
       homeDashboard: homeDashboardResolver
+    }
+  },
+ {
+    path: 'rpc',
+    component: RpcComponent,
+    data: {
+      auth: [Authority.SYS_ADMIN],
+      title: 'RPC',
+      breadcrumb: {
+        menuId: MenuId.rpc,
+      }
     }
   }
 ];

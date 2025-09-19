@@ -32,7 +32,7 @@ public class LoginRequest {
         this.password = password;
     }
 
-    @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "User email", example = "tenant@thingsboard.org")
+    @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "User email", example = "tenant@nexarise.ai")
     public String getUsername() {
         return username;
     }

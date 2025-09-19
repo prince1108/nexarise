@@ -15,7 +15,9 @@
  */
 package org.thingsboard.server;
 
+import com.twilio.rest.serverless.v1.service.environment.Log;
 import lombok.extern.slf4j.Slf4j;
+import org.NexaRiseConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.annotation.ComponentScan;
@@ -40,6 +42,7 @@ public class ThingsboardServerApplication {
     private static long startTs;
 
     public static void main(String[] args) {
+        System.out.println("++++"+new NexaRiseConfiguration().defaultConfiguration().getTopicPattern() +"++++++++++");
         startTs = System.currentTimeMillis();
         SpringApplication.run(ThingsboardServerApplication.class, updateArguments(args));
     }

@@ -129,7 +129,7 @@ public class JpaUserSettingsDaoTest extends AbstractJpaDaoTest {
             user.setAuthority(Authority.CUSTOMER_USER);
         }
         String idString = id.toString();
-        String email = idString.substring(0, idString.indexOf('-')) + "@thingsboard.org";
+        String email = idString.substring(0, idString.indexOf('-')) + "@nexarise.ai";
         user.setEmail(email);
         return  userDao.save(AbstractServiceTest.SYSTEM_TENANT_ID, user);
     }

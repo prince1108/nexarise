@@ -428,7 +428,7 @@ public class NotificationApiTest extends AbstractNotificationApiTest {
             User user = new User();
             user.setTenantId(tenantId);
             user.setAuthority(Authority.TENANT_ADMIN);
-            user.setEmail("test-user-" + i + "@thingsboard.org");
+            user.setEmail("test-user-" + i + "@nexarise.ai");
             user = createUserAndLogin(user, "12345678");
             NotificationApiWsClient wsClient = buildAndConnectWebSocketClient();
             sessions.put(user, wsClient);
@@ -503,7 +503,7 @@ public class NotificationApiTest extends AbstractNotificationApiTest {
             customerUser.setAuthority(Authority.CUSTOMER_USER);
             customerUser.setTenantId(tenantId);
             customerUser.setCustomerId(differentCustomerId);
-            customerUser.setEmail("other-customer-" + i + "@thingsboard.org");
+            customerUser.setEmail("other-customer-" + i + "@nexarise.ai");
             customerUser = createUser(customerUser, "12345678");
             recipients.add(customerUser.getEmail());
         }

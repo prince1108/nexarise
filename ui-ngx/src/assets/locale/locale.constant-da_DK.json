@@ -5611,7 +5611,7 @@
     "tenant-required": "Lejer er påkrævet",
     "search": "Søg lejere",
     "selected-tenants": "{ count, plural, =1 {1 lejer} other {# lejere} } valgt",
-    "isolated-tb-rule-engine": "Brug isolerede ThingsBoard Rule Engine-køer",
+    "isolated-tb-rule-engine": "Brug isolerede NexaRise Rule Engine-køer",
     "isolated-tb-rule-engine-details": "Hver lejer vil have dedikerede Rule Engine-køer"
   },
   "tenant-profile": {

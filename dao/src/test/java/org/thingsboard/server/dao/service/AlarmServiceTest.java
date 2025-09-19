@@ -81,7 +81,7 @@ public class AlarmServiceTest extends AbstractServiceTest {
     UserService userService;
 
     public static final String TEST_ALARM = "TEST_ALARM";
-    private static final String TEST_TENANT_EMAIL = "testtenant@thingsboard.org";
+    private static final String TEST_TENANT_EMAIL = "testtenant@nexarise.ai";
     private static final String TEST_TENANT_FIRST_NAME = "testtenantfirstname";
     private static final String TEST_TENANT_LAST_NAME = "testtenantlastname";
 

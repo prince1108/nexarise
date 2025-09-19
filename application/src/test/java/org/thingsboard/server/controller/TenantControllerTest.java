@@ -428,7 +428,7 @@ public class TenantControllerTest extends AbstractControllerTest {
     @Test
     public void testUpdateQueueConfigForIsolatedTenant() throws Exception {
         Comparator<Queue> queueComparator = Comparator.comparing(Queue::getName);
-        final String username = "isolatedtenant@thingsboard.org";
+        final String username = "isolatedtenant@nexarise.ai";
         final String password = "123456";
         loginSysAdmin();
 

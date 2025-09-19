@@ -20,7 +20,7 @@
     <parent>
         <groupId>org.thingsboard</groupId>
         <version>4.3.0-SNAPSHOT</version>
-        <artifactId>thingsboard</artifactId>
+        <artifactId>nexarise</artifactId>
     </parent>
     <artifactId>netty-mqtt</artifactId>
     <version>4.3.0-SNAPSHOT</version>

@@ -242,7 +242,7 @@ public class AuthControllerTest extends AbstractControllerTest {
         loginTenantAdmin();
         User user = new User();
         user.setAuthority(Authority.TENANT_ADMIN);
-        user.setEmail("tenant-admin-2@thingsboard.org");
+        user.setEmail("tenant-admin-2@nexarise.ai");
         user = doPost("/api/user", user, User.class);
         assertThat(getUser(user.getId()).getAdditionalInfo().get("userActivated").asBoolean()).isFalse();
 

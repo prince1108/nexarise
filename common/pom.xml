@@ -21,12 +21,12 @@
     <parent>
         <groupId>org.thingsboard</groupId>
         <version>4.3.0-SNAPSHOT</version>
-        <artifactId>thingsboard</artifactId>
+        <artifactId>nexarise</artifactId>
     </parent>
     <artifactId>common</artifactId>
     <packaging>pom</packaging>
 
-    <name>Thingsboard Server Commons</name>
+    <name>NexaRise Server Commons</name>
     <url>https://thingsboard.io</url>
 
     <properties>

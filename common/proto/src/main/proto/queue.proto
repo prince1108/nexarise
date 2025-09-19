@@ -1724,7 +1724,7 @@ message ToRuleEngineNotificationMsg {
   ComponentLifecycleMsgProto componentLifecycle = 5;
 }
 
-/* Messages that are handled by ThingsBoard Transport Service */
+/* Messages that are handled by NexaRise Transport Service */
 message ToTransportMsg {
   int64 sessionIdMSB = 1;
   int64 sessionIdLSB = 2;

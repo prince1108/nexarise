@@ -27,7 +27,7 @@
     <artifactId>cluster-api</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard Server Common Cluster API</name>
+    <name>NexaRise Server Common Cluster API</name>
     <url>https://thingsboard.io</url>
 
     <properties>

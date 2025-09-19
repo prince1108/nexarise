@@ -334,7 +334,7 @@ public class UserControllerTest extends AbstractControllerTest {
 
         User user = new User();
         user.setAuthority(Authority.TENANT_ADMIN);
-        user.setEmail("tenant2@thingsboard.org");
+        user.setEmail("tenant2@nexarise.ai");
         user.setFirstName("Joe");
         user.setLastName("Downs");
 
@@ -388,7 +388,7 @@ public class UserControllerTest extends AbstractControllerTest {
             User user = new User();
             user.setAuthority(Authority.TENANT_ADMIN);
             user.setTenantId(tenantId);
-            user.setEmail("testTenant" + i + "@thingsboard.org");
+            user.setEmail("testTenant" + i + "@nexarise.ai");
             tenantAdmins.add(doPost("/api/user", user, User.class));
         }
 
@@ -442,7 +442,7 @@ public class UserControllerTest extends AbstractControllerTest {
             user.setAuthority(Authority.TENANT_ADMIN);
             user.setTenantId(tenantId);
             String suffix = StringUtils.randomAlphanumeric((int) (5 + Math.random() * 10));
-            String email = email1 + suffix + "@thingsboard.org";
+            String email = email1 + suffix + "@nexarise.ai";
             email = i % 2 == 0 ? email.toLowerCase() : email.toUpperCase();
             user.setEmail(email);
             tenantAdminsEmail1.add(doPost("/api/user", user, User.class));
@@ -456,7 +456,7 @@ public class UserControllerTest extends AbstractControllerTest {
             user.setAuthority(Authority.TENANT_ADMIN);
             user.setTenantId(tenantId);
             String suffix = StringUtils.randomAlphanumeric((int) (5 + Math.random() * 10));
-            String email = email2 + suffix + "@thingsboard.org";
+            String email = email2 + suffix + "@nexarise.ai";
             email = i % 2 == 0 ? email.toLowerCase() : email.toUpperCase();
             user.setEmail(email);
             tenantAdminsEmail2.add(doPost("/api/user", user, User.class));
@@ -544,7 +544,7 @@ public class UserControllerTest extends AbstractControllerTest {
             User user = new User();
             user.setAuthority(Authority.CUSTOMER_USER);
             user.setCustomerId(customerId);
-            user.setEmail("testCustomer" + i + "@thingsboard.org");
+            user.setEmail("testCustomer" + i + "@nexarise.ai");
             customerUsers.add(doPost("/api/user", user, User.class));
         }
 
@@ -585,10 +585,10 @@ public class UserControllerTest extends AbstractControllerTest {
         List<User> customerUsersEmail2 = new ArrayList<>();
         for (int i = 0; i < 45; i++) {
             User customerUser = createCustomerUser(customerId);
-            customerUser.setEmail(email1 + StringUtils.randomAlphanumeric((int) (5 + Math.random() * 10)) + "@thingsboard.org");
+            customerUser.setEmail(email1 + StringUtils.randomAlphanumeric((int) (5 + Math.random() * 10)) + "@nexarise.ai");
             customerUsersEmail1.add(doPost("/api/user", customerUser, User.class));
 
-            customerUser.setEmail(email2 + StringUtils.randomAlphanumeric((int) (5 + Math.random() * 10)) + "@thingsboard.org");
+            customerUser.setEmail(email2 + StringUtils.randomAlphanumeric((int) (5 + Math.random() * 10)) + "@nexarise.ai");
             customerUsersEmail2.add(doPost("/api/user", customerUser, User.class));
         }
 
@@ -664,7 +664,7 @@ public class UserControllerTest extends AbstractControllerTest {
         expectedCustomerUserIds.add(customerUserId);
         for (int i = 0; i < 45; i++) {
             User customerUser = createCustomerUser(customerId);
-            customerUser.setEmail(email + StringUtils.randomAlphanumeric((int) (5 + Math.random() * 10)) + "@thingsboard.org");
+            customerUser.setEmail(email + StringUtils.randomAlphanumeric((int) (5 + Math.random() * 10)) + "@nexarise.ai");
             User user = doPost("/api/user", customerUser, User.class);
             expectedCustomerUserIds.add(user.getId());
         }
@@ -745,7 +745,7 @@ public class UserControllerTest extends AbstractControllerTest {
         String email = "testEmail1";
         for (int i = 0; i < 45; i++) {
             User customerUser = createCustomerUser(customerId);
-            customerUser.setEmail(email + StringUtils.randomAlphanumeric((int) (5 + Math.random() * 10)) + "@thingsboard.org");
+            customerUser.setEmail(email + StringUtils.randomAlphanumeric((int) (5 + Math.random() * 10)) + "@nexarise.ai");
             doPost("/api/user", customerUser, User.class);
         }
 
@@ -972,12 +972,12 @@ public class UserControllerTest extends AbstractControllerTest {
             String suffix = StringUtils.randomAlphabetic((int) (5 + Math.random() * 10));
 
             customerUsersContainingWord.add(doPost("/api/user", createCustomerUser(searchText + i, "Last" + i, customerId), User.class));
-            customerUsersContainingWord.add(doPost("/api/user", createCustomerUser(null, null, searchText + suffix + "@thingsboard.org", customerId), User.class));
+            customerUsersContainingWord.add(doPost("/api/user", createCustomerUser(null, null, searchText + suffix + "@nexarise.ai", customerId), User.class));
             doPost("/api/user", createCustomerUser(null, null, customerId), User.class);
 
             suffix = StringUtils.randomAlphabetic((int) (5 + Math.random() * 10));
             doPost("/api/user", createCustomerUser(searchText + i, "Last" + i, customerId2), User.class);
-            doPost("/api/user", createCustomerUser(null, null, searchText + suffix + "@thingsboard.org", customerId2), User.class);
+            doPost("/api/user", createCustomerUser(null, null, searchText + suffix + "@nexarise.ai", customerId2), User.class);
         }
 
         createUserAndLogin(createCustomerUser(customerId), "testPassword2");
@@ -1022,12 +1022,12 @@ public class UserControllerTest extends AbstractControllerTest {
         for (int i = 0; i < 10; i++) {
             String suffix = StringUtils.randomAlphabetic((int) (5 + Math.random() * 10));
             usersContainingWord.add(doPost("/api/user", createCustomerUser("First" + i, searchText + i, customerId), User.class));
-            usersContainingWord.add(doPost("/api/user", createCustomerUser(null, null, searchText + suffix + "@thingsboard.org", customerId), User.class));
+            usersContainingWord.add(doPost("/api/user", createCustomerUser(null, null, searchText + suffix + "@nexarise.ai", customerId), User.class));
             doPost("/api/user", createCustomerUser(null, null, customerId), User.class);
 
             suffix = StringUtils.randomAlphabetic((int) (5 + Math.random() * 10));
             usersContainingWord.add(doPost("/api/user", createCustomerUser("First" + i, searchText + i, customerId2), User.class));
-            usersContainingWord.add(doPost("/api/user", createCustomerUser(null, null, searchText + suffix + "@thingsboard.org", customerId2), User.class));
+            usersContainingWord.add(doPost("/api/user", createCustomerUser(null, null, searchText + suffix + "@nexarise.ai", customerId2), User.class));
         }
 
         loginDifferentTenant();
@@ -1072,7 +1072,7 @@ public class UserControllerTest extends AbstractControllerTest {
 
     private static User createCustomerUser(String firstName, String lastName, CustomerId customerId) {
         String suffix = StringUtils.randomAlphanumeric((int) (5 + Math.random() * 10));
-        return createCustomerUser(firstName, lastName, "testMail" + suffix + "@thingsboard.org", customerId);
+        return createCustomerUser(firstName, lastName, "testMail" + suffix + "@nexarise.ai", customerId);
     }
 
     private static User createCustomerUser(String firstName, String lastName, String email, CustomerId customerId) {

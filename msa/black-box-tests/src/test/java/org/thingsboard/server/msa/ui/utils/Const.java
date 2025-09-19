@@ -20,7 +20,7 @@ import static org.thingsboard.server.msa.TestProperties.getBaseUrl;
 public class Const {
 
     public static final String URL = getBaseUrl();
-    public static final String TENANT_EMAIL = "tenant@thingsboard.org";
+    public static final String TENANT_EMAIL = "tenant@nexarise.ai";
     public static final String TENANT_PASSWORD = "tenant";
     public static final String ENTITY_NAME = "Az!@#$%^&*()_-+=~`";
     public static final String ROOT_RULE_CHAIN_NAME = "Root Rule Chain";

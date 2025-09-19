@@ -139,7 +139,7 @@ public class DeviceControllerTest extends AbstractControllerTest {
         tenantAdmin = new User();
         tenantAdmin.setAuthority(Authority.TENANT_ADMIN);
         tenantAdmin.setTenantId(savedTenant.getId());
-        tenantAdmin.setEmail("tenant2@thingsboard.org");
+        tenantAdmin.setEmail("tenant2@nexarise.ai");
         tenantAdmin.setFirstName("Joe");
         tenantAdmin.setLastName("Downs");
 
@@ -693,7 +693,7 @@ public class DeviceControllerTest extends AbstractControllerTest {
         User tenantAdmin2 = new User();
         tenantAdmin2.setAuthority(Authority.TENANT_ADMIN);
         tenantAdmin2.setTenantId(savedTenant2.getId());
-        tenantAdmin2.setEmail("tenant3@thingsboard.org");
+        tenantAdmin2.setEmail("tenant3@nexarise.ai");
         tenantAdmin2.setFirstName("Joe");
         tenantAdmin2.setLastName("Downs");
 
@@ -1322,13 +1322,13 @@ public class DeviceControllerTest extends AbstractControllerTest {
         User user = new User();
         user.setAuthority(Authority.TENANT_ADMIN);
         user.setTenantId(savedDifferentTenant.getId());
-        user.setEmail("tenant9@thingsboard.org");
+        user.setEmail("tenant9@nexarise.ai");
         user.setFirstName("Sam");
         user.setLastName("Downs");
 
         createUserAndLogin(user, "testPassword1");
 
-        login("tenant2@thingsboard.org", "testPassword1");
+        login("tenant2@nexarise.ai", "testPassword1");
 
         Mockito.reset(tbClusterService, auditLogService, gatewayNotificationsService);
 
@@ -1366,7 +1366,7 @@ public class DeviceControllerTest extends AbstractControllerTest {
                             proto.getAdded());
         });
 
-        login("tenant9@thingsboard.org", "testPassword1");
+        login("tenant9@nexarise.ai", "testPassword1");
 
         Device foundDevice1 = doGet("/api/device/" + assignedDevice.getId().getId(), Device.class);
         Assert.assertNotNull(foundDevice1);

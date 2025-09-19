@@ -71,7 +71,7 @@ public class AlarmCommentServiceTest extends AbstractServiceTest {
         user = new User();
         user.setAuthority(Authority.TENANT_ADMIN);
         user.setTenantId(tenantId);
-        user.setEmail("tenant@thingsboard.org");
+        user.setEmail("tenant@nexarise.ai");
         user.setFirstName("John");
         user.setLastName("Brown");
         user = userService.saveUser(TenantId.SYS_TENANT_ID, user);

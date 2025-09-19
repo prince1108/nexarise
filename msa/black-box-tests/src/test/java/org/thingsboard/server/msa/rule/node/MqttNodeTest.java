@@ -70,7 +70,7 @@ public class MqttNodeTest extends AbstractContainerTest {
 
     @BeforeMethod
     public void setUp() {
-        testRestClient.login("tenant@thingsboard.org", "tenant");
+        testRestClient.login("tenant@nexarise.ai", "tenant");
         device = testRestClient.postDevice("", defaultDevicePrototype("mqtt_"));
     }
 

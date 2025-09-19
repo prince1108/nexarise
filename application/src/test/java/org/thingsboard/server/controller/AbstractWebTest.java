@@ -196,21 +196,21 @@ public abstract class AbstractWebTest extends AbstractInMemoryStorageTest {
     protected static final String TEST_TENANT_NAME = "TEST TENANT";
     protected static final String TEST_DIFFERENT_TENANT_NAME = "TEST DIFFERENT TENANT";
 
-    protected static final String SYS_ADMIN_EMAIL = "sysadmin@thingsboard.org";
+    protected static final String SYS_ADMIN_EMAIL = "sysadmin@nexarise.ai";
     private static final String SYS_ADMIN_PASSWORD = "sysadmin";
 
-    protected static final String TENANT_ADMIN_EMAIL = "testtenant@thingsboard.org";
+    protected static final String TENANT_ADMIN_EMAIL = "testtenant@nexarise.ai";
     protected static final String TENANT_ADMIN_PASSWORD = "tenant";
 
-    protected static final String DIFFERENT_TENANT_ADMIN_EMAIL = "testdifftenant@thingsboard.org";
+    protected static final String DIFFERENT_TENANT_ADMIN_EMAIL = "testdifftenant@nexarise.ai";
     private static final String DIFFERENT_TENANT_ADMIN_PASSWORD = "difftenant";
 
-    protected static final String CUSTOMER_USER_EMAIL = "testcustomer@thingsboard.org";
+    protected static final String CUSTOMER_USER_EMAIL = "testcustomer@nexarise.ai";
     private static final String CUSTOMER_USER_PASSWORD = "customer";
 
-    protected static final String DIFFERENT_CUSTOMER_USER_EMAIL = "testdifferentcustomer@thingsboard.org";
+    protected static final String DIFFERENT_CUSTOMER_USER_EMAIL = "testdifferentcustomer@nexarise.ai";
 
-    protected static final String DIFFERENT_TENANT_CUSTOMER_USER_EMAIL = "testdifferenttenantcustomer@thingsboard.org";
+    protected static final String DIFFERENT_TENANT_CUSTOMER_USER_EMAIL = "testdifferenttenantcustomer@nexarise.ai";
     private static final String DIFFERENT_CUSTOMER_USER_PASSWORD = "diffcustomer";
 
     /**

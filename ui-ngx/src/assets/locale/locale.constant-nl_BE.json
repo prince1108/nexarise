@@ -5010,7 +5010,7 @@
         "allow-customer-white-labeling": "White labeling van klanten toestaan",
         "search": "Tenants zoeken",
         "selected-tenants": "{ count, plural, =1 {1 tenant} other {# tenants} } geselecteerd",
-        "isolated-tb-rule-engine": "Verwerking in geïsoleerde ThingsBoard Rule Engine-container",
+        "isolated-tb-rule-engine": "Verwerking in geïsoleerde NexaRise Rule Engine-container",
         "isolated-tb-rule-engine-details": "Vereist afzonderlijke microservice(s) per geïsoleerde tenant"
     },
     "tenant-profile": {

@@ -363,7 +363,7 @@ public class TwoFactorAuthTest extends AbstractControllerTest {
         User twoFaUser = new User();
         twoFaUser.setAuthority(Authority.TENANT_ADMIN);
         twoFaUser.setTenantId(tenantId);
-        twoFaUser.setEmail("2fa@thingsboard.org");
+        twoFaUser.setEmail("2fa@nexarise.ai");
         twoFaUser = createUserAndLogin(twoFaUser, "12345678");
 
         TotpTwoFaAccountConfig totpTwoFaAccountConfig = (TotpTwoFaAccountConfig) twoFactorAuthService.generateNewAccountConfig(twoFaUser, TwoFaProviderType.TOTP);

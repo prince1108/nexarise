@@ -86,10 +86,10 @@ public class CalculatedFieldTest extends AbstractContainerTest {
 
     @BeforeClass
     public void beforeClass() {
-        testRestClient.login("sysadmin@thingsboard.org", "sysadmin");
+        testRestClient.login("sysadmin@nexarise.ai", "sysadmin");
 
         tenantId = testRestClient.postTenant(EntityPrototypes.defaultTenantPrototype("Tenant")).getId();
-        tenantAdminId = testRestClient.createUserAndLogin(defaultTenantAdmin(tenantId, "tenantAdmin@thingsboard.org"), "tenant");
+        tenantAdminId = testRestClient.createUserAndLogin(defaultTenantAdmin(tenantId, "tenantAdmin@nexarise.ai"), "tenant");
 
         deviceProfileId = testRestClient.postDeviceProfile(defaultDeviceProfile("Device Profile 1")).getId();
         device = testRestClient.postDevice(deviceToken, createDevice("Device 1", deviceProfileId));
@@ -109,13 +109,13 @@ public class CalculatedFieldTest extends AbstractContainerTest {
 
     @BeforeMethod
     public void beforeMethod() {
-        testRestClient.login("sysadmin@thingsboard.org", "sysadmin");
+        testRestClient.login("sysadmin@nexarise.ai", "sysadmin");
     }
 
     @AfterClass
     public void afterClass() {
         testRestClient.resetToken();
-        testRestClient.login("sysadmin@thingsboard.org", "sysadmin");
+        testRestClient.login("sysadmin@nexarise.ai", "sysadmin");
         testRestClient.deleteTenant(tenantId);
     }
 

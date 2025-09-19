@@ -156,7 +156,7 @@ public class JwtTokenFactoryTest {
     private SecurityUser createSecurityUser() {
         SecurityUser securityUser = new SecurityUser();
         securityUser.setId(new UserId(UUID.randomUUID()));
-        securityUser.setEmail("tenant@thingsboard.org");
+        securityUser.setEmail("tenant@nexarise.ai");
         securityUser.setAuthority(Authority.TENANT_ADMIN);
         securityUser.setTenantId(new TenantId(UUID.randomUUID()));
         securityUser.setEnabled(true);

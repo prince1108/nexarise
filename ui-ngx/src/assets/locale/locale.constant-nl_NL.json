@@ -5457,7 +5457,7 @@
     "tenant-required": "Tenant is verplicht",
     "search": "Zoek tenants",
     "selected-tenants": "{ count, plural, =1 {1 tenant} other {# tenants} } geselecteerd",
-    "isolated-tb-rule-engine": "Gebruik geïsoleerde ThingsBoard Rule Engine-wachtrijen",
+    "isolated-tb-rule-engine": "Gebruik geïsoleerde NexaRise Rule Engine-wachtrijen",
     "isolated-tb-rule-engine-details": "Elke tenant krijgt toegewezen Rule Engine-wachtrijen"
   },
   "tenant-profile": {

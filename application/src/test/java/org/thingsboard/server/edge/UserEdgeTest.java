@@ -51,7 +51,7 @@ public class UserEdgeTest extends AbstractEdgeTest {
         User newTenantAdmin = new User();
         newTenantAdmin.setAuthority(Authority.TENANT_ADMIN);
         newTenantAdmin.setTenantId(tenantId);
-        newTenantAdmin.setEmail("tenantAdmin@thingsboard.org");
+        newTenantAdmin.setEmail("tenantAdmin@nexarise.ai");
         newTenantAdmin.setFirstName("Boris");
         newTenantAdmin.setLastName("Johnson");
         User savedTenantAdmin = createUser(newTenantAdmin, "tenant");
@@ -138,7 +138,7 @@ public class UserEdgeTest extends AbstractEdgeTest {
         customerUser.setAuthority(Authority.CUSTOMER_USER);
         customerUser.setTenantId(tenantId);
         customerUser.setCustomerId(savedCustomer.getId());
-        customerUser.setEmail("customerUser@thingsboard.org");
+        customerUser.setEmail("customerUser@nexarise.ai");
         customerUser.setFirstName("John");
         customerUser.setLastName("Edwards");
         User savedCustomerUser = createUser(customerUser, "customer");

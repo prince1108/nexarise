@@ -104,7 +104,7 @@ public class MqttClientTest extends AbstractContainerTest {
         };
         handlerExecutor.init();
 
-        testRestClient.login("tenant@thingsboard.org", "tenant");
+        testRestClient.login("tenant@nexarise.ai", "tenant");
         device = testRestClient.postDevice("", defaultDevicePrototype("http_"));
     }
 

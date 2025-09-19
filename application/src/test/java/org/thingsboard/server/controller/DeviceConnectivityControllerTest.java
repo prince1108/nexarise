@@ -152,7 +152,7 @@ public class DeviceConnectivityControllerTest extends AbstractControllerTest {
         tenantAdmin = new User();
         tenantAdmin.setAuthority(Authority.TENANT_ADMIN);
         tenantAdmin.setTenantId(savedTenant.getId());
-        tenantAdmin.setEmail("tenant2@thingsboard.org");
+        tenantAdmin.setEmail("tenant2@nexarise.ai");
         tenantAdmin.setFirstName("Joe");
         tenantAdmin.setLastName("Downs");
 
@@ -680,7 +680,7 @@ public class DeviceConnectivityControllerTest extends AbstractControllerTest {
         adminSettings.setJsonValue(config);
         doPost("/api/admin/settings", adminSettings).andExpect(status().isOk());
 
-        login("tenant2@thingsboard.org", "testPassword1");
+        login("tenant2@nexarise.ai", "testPassword1");
 
         Device device = new Device();
         device.setName("My device");
@@ -749,7 +749,7 @@ public class DeviceConnectivityControllerTest extends AbstractControllerTest {
         adminSettings.setJsonValue(config);
         doPost("/api/admin/settings", adminSettings).andExpect(status().isOk());
 
-        login("tenant2@thingsboard.org", "testPassword1");
+        login("tenant2@nexarise.ai", "testPassword1");
 
         Device device = new Device();
         device.setName("My device");
@@ -806,7 +806,7 @@ public class DeviceConnectivityControllerTest extends AbstractControllerTest {
 
         setConnectivityHost("test.domain");
 
-        login("tenant2@thingsboard.org", "testPassword1");
+        login("tenant2@nexarise.ai", "testPassword1");
 
         Device device = new Device();
         device.setName("My device");
@@ -907,7 +907,7 @@ public class DeviceConnectivityControllerTest extends AbstractControllerTest {
         doPost("/api/admin/settings", adminSettings).andExpect(status().isOk());
 
 
-        login("tenant2@thingsboard.org", "testPassword1");
+        login("tenant2@nexarise.ai", "testPassword1");
 
         Device device = new Device();
         device.setName("My device");

@@ -72,36 +72,36 @@ public class EdqsEntityDataQueryTest extends AbstractContainerTest {
 
     @BeforeClass
     public void beforeClass() throws Exception {
-        testRestClient.login("sysadmin@thingsboard.org", "sysadmin");
+        testRestClient.login("sysadmin@nexarise.ai", "sysadmin");
         await().atMost(60, TimeUnit.SECONDS).until(() -> testRestClient.getEdqsState().isApiEnabled());
 
         tenantId = testRestClient.postTenant(EntityPrototypes.defaultTenantPrototype("Tenant")).getId();
-        tenantAdminId = testRestClient.createUserAndLogin(defaultTenantAdmin(tenantId, "tenantAdmin@thingsboard.org"), "tenant");
+        tenantAdminId = testRestClient.createUserAndLogin(defaultTenantAdmin(tenantId, "tenantAdmin@nexarise.ai"), "tenant");
         testRestClient.postDeviceProfile(defaultDeviceProfile(deviceProfile));
         createDevices(deviceProfile, tenantDevices, 97);
         customerId = testRestClient.postCustomer(defaultCustomer(tenantId, "Customer")).getId();
-        customerUserId = testRestClient.postUser(defaultCustomerAdmin(tenantId, customerId,  "customerUser@thingsboard.org")).getId();
+        customerUserId = testRestClient.postUser(defaultCustomerAdmin(tenantId, customerId,  "customerUser@nexarise.ai")).getId();
         assignDevicesToCustomer(customerId, tenantDevices, 12);
 
-        testRestClient.login("sysadmin@thingsboard.org", "sysadmin");
+        testRestClient.login("sysadmin@nexarise.ai", "sysadmin");
         tenantId2 = testRestClient.postTenant(EntityPrototypes.defaultTenantPrototype("Tenant")).getId();
-        tenant2AdminId = testRestClient.createUserAndLogin(defaultTenantAdmin(tenantId2, "tenant2Admin@thingsboard.org"), "tenant");
+        tenant2AdminId = testRestClient.createUserAndLogin(defaultTenantAdmin(tenantId2, "tenant2Admin@nexarise.ai"), "tenant");
         testRestClient.postDeviceProfile(defaultDeviceProfile(deviceProfile));
         createDevices(deviceProfile, tenant2Devices, 97);
         customerId2 = testRestClient.postCustomer(defaultCustomer(tenantId2, "Customer")).getId();
-        customer2UserId = testRestClient.postUser(defaultCustomerAdmin(tenantId2, customerId2,  "customer2User@thingsboard.org")).getId();
+        customer2UserId = testRestClient.postUser(defaultCustomerAdmin(tenantId2, customerId2,  "customer2User@nexarise.ai")).getId();
         assignDevicesToCustomer(customerId2, tenant2Devices, 12);
     }
 
     @BeforeMethod
     public void beforeMethod() {
-        testRestClient.login("sysadmin@thingsboard.org", "sysadmin");
+        testRestClient.login("sysadmin@nexarise.ai", "sysadmin");
     }
 
     @AfterClass
     public void afterClass() {
         testRestClient.resetToken();
-        testRestClient.login("sysadmin@thingsboard.org", "sysadmin");
+        testRestClient.login("sysadmin@nexarise.ai", "sysadmin");
         testRestClient.deleteTenant(tenantId);
         testRestClient.deleteTenant(tenantId2);
     }
@@ -121,7 +121,7 @@ public class EdqsEntityDataQueryTest extends AbstractContainerTest {
                 .until(() -> testRestClient.postCountDataQuery(query).equals(97L));
 
         testRestClient.resetToken();
-        testRestClient.login("sysadmin@thingsboard.org", "sysadmin");
+        testRestClient.login("sysadmin@nexarise.ai", "sysadmin");
         testRestClient.getAndSetUserToken(tenant2AdminId);
         await("Waiting for total device count")
                 .atMost(30, TimeUnit.SECONDS)
@@ -140,7 +140,7 @@ public class EdqsEntityDataQueryTest extends AbstractContainerTest {
 
         // login other tenant admin
         testRestClient.resetToken();
-        testRestClient.login("sysadmin@thingsboard.org", "sysadmin");
+        testRestClient.login("sysadmin@nexarise.ai", "sysadmin");
         testRestClient.getAndSetUserToken(tenant2AdminId);
         checkUserDevices(tenant2Devices);
     }

@@ -27,7 +27,7 @@
     <artifactId>remote-js-client</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard Server JS Client for remote JS execution</name>
+    <name>NexaRise Server JS Client for remote JS execution</name>
     <url>https://thingsboard.io</url>
 
     <properties>

@@ -99,6 +99,7 @@
         "general-settings": "General Settings",
         "home-settings": "Home Settings",
         "home": "Home",
+        "home": "Ravi",
         "outgoing-mail": "Mail Server",
         "outgoing-mail-settings": "Outgoing Mail Server Settings",
         "system-settings": "System Settings",
@@ -1235,8 +1236,8 @@
         "make-private-dashboard-title": "Ar tikrai norite skydelį '{{dashboardTitle}}' padaryti privačiu?",
         "make-private-dashboard-text": "Po patvirtinimo, skydelis taps privačiu ir jo nematys kiti vartotojai.",
         "make-private-dashboard": "Skydelį padaryti privačiu",
-        "socialshare-text": "'{{dashboardTitle}}' powered by ThingsBoard",
-        "socialshare-title": "'{{dashboardTitle}}' powered by ThingsBoard",
+        "socialshare-text": "'{{dashboardTitle}}' Powered by NexaRise",
+        "socialshare-title": "'{{dashboardTitle}}' Powered by NexaRise",
         "select-dashboard": "Pasirinkite skydelį",
         "no-dashboards-matching": "Skydelio, atitinkančio '{{entity}}' nėra.",
         "dashboard-required": "Skydelis būtinas.",
@@ -4974,7 +4975,7 @@
         "allow-customer-white-labeling": "Leisti kliento personalizavimą",
         "search": "Valdytojų paieška",
         "selected-tenants": "Pasirinkta { count, plural, =1 {1 valdytojas} other {# valdutojai} }",
-        "isolated-tb-rule-engine": "Use isolated ThingsBoard Rule Engine queues",
+        "isolated-tb-rule-engine": "Use isolated NexaRise Rule Engine queues",
         "isolated-tb-rule-engine-details": "Each tenant will have dedicated Rule Engine queues"
     },
     "tenant-profile": {

@@ -149,7 +149,7 @@ public class HomePageApiTest extends AbstractControllerTest {
         List<User> users = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             User user = new User();
-            user.setEmail(i + "user@thingsboard.org");
+            user.setEmail(i + "user@nexarise.ai");
             user.setTenantId(tenantId);
             user.setAuthority(Authority.TENANT_ADMIN);
             users.add(doPost("/api/user", user, User.class));
@@ -283,7 +283,7 @@ public class HomePageApiTest extends AbstractControllerTest {
 
     @Test
     public void testGetFeaturesInfo() throws Exception {
-        String mail = "test@thingsboard.org";
+        String mail = "test@nexarise.ai";
         Mockito.doAnswer(invocation -> {
             AdminSettings mailSettings = adminSettingsService.findAdminSettingsByKey(TenantId.SYS_TENANT_ID, "mail");
             JsonNode mailFrom = mailSettings.getJsonValue().get("mailFrom");
@@ -471,7 +471,7 @@ public class HomePageApiTest extends AbstractControllerTest {
         for (int i = 0; i < 97; i++) {
             User user = new User();
             user.setAuthority(Authority.TENANT_ADMIN);
-            user.setEmail(i + "user@thingsboard.org");
+            user.setEmail(i + "user@nexarise.ai");
             users.add(doPost("/api/user", user, User.class));
         }
 

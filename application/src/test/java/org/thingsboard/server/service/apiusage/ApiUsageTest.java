@@ -76,7 +76,7 @@ public class ApiUsageTest extends AbstractControllerTest {
         tenantAdmin = new User();
         tenantAdmin.setAuthority(Authority.TENANT_ADMIN);
         tenantAdmin.setTenantId(savedTenant.getId());
-        tenantAdmin.setEmail("tenant2@thingsboard.org");
+        tenantAdmin.setEmail("tenant2@nexarise.ai");
 
         tenantAdmin = createUserAndLogin(tenantAdmin, "testPassword1");
     }

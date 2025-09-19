@@ -50,6 +50,7 @@ export interface HomeSection {
 
 export enum MenuId {
   home = 'home',
+  rpc = 'rpc' ,
   tenants = 'tenants',
   tenant_profiles = 'tenant_profiles',
   resources = 'resources',
@@ -119,6 +120,16 @@ export const menuSectionMap = new Map<MenuId, MenuSection>([
       name: 'home.home',
       type: 'link',
       path: '/home',
+      icon: 'home'
+    }
+  ],
+[
+    MenuId.rpc,
+    {
+      id: MenuId.rpc,
+      name: 'RPC',
+      type: 'link',
+      path: '/rpc',
       icon: 'home'
     }
   ],
@@ -727,6 +738,7 @@ const defaultUserMenuMap = new Map<Authority, MenuReference[]>([
     Authority.SYS_ADMIN,
     [
       {id: MenuId.home},
+      {id: MenuId.rpc},
       {id: MenuId.tenants},
       {id: MenuId.tenant_profiles},
       {

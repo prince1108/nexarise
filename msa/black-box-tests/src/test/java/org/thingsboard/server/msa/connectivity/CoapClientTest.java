@@ -36,7 +36,7 @@ public class CoapClientTest extends AbstractCoapClientTest{
     private Device device;
     @BeforeMethod
     public void setUp() throws Exception {
-        testRestClient.login("tenant@thingsboard.org", "tenant");
+        testRestClient.login("tenant@nexarise.ai", "tenant");
         device = testRestClient.postDevice("", defaultDevicePrototype("http_"));
     }
 

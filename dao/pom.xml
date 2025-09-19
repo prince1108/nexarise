@@ -21,12 +21,12 @@
     <parent>
         <groupId>org.thingsboard</groupId>
         <version>4.3.0-SNAPSHOT</version>
-        <artifactId>thingsboard</artifactId>
+        <artifactId>nexarise</artifactId>
     </parent>
     <artifactId>dao</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard Server DAO Layer</name>
+    <name>NexaRise Server DAO Layer</name>
     <url>https://thingsboard.io</url>
 
     <properties>

@@ -27,7 +27,7 @@
     <artifactId>script-api</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard Server Script invoke API</name>
+    <name>NexaRise Server Script invoke API</name>
     <url>https://thingsboard.io</url>
 
     <properties>

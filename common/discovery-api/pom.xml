@@ -27,7 +27,7 @@
     <artifactId>discovery-api</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard Server Service Info Provider API</name>
+    <name>NexaRise Server Service Info Provider API</name>
     <url>https://thingsboard.io</url>
 
     <properties>

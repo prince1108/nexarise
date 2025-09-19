@@ -21,12 +21,12 @@
     <parent>
         <groupId>org.thingsboard</groupId>
         <version>4.3.0-SNAPSHOT</version>
-        <artifactId>thingsboard</artifactId>
+        <artifactId>nexarise</artifactId>
     </parent>
     <artifactId>application</artifactId>
     <packaging>jar</packaging>
 
-    <name>ThingsBoard Server Application</name>
+    <name>NexaRise Server Application</name>
     <url>https://thingsboard.io</url>
     <description>Open-source IoT Platform - Device management, data collection, processing and visualization
     </description>

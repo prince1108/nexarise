@@ -5611,7 +5611,7 @@
     "tenant-required": "Mieter ist erforderlich",
     "search": "Mieter suchen",
     "selected-tenants": "{ count, plural, =1 {1 Mieter} other {# Mieter} } ausgewählt",
-    "isolated-tb-rule-engine": "Isolierte ThingsBoard Rule Engine-Warteschlangen verwenden",
+    "isolated-tb-rule-engine": "Isolierte NexaRise Rule Engine-Warteschlangen verwenden",
     "isolated-tb-rule-engine-details": "Jeder Mieter erhält dedizierte Rule Engine-Warteschlangen"
   },
   "tenant-profile": {

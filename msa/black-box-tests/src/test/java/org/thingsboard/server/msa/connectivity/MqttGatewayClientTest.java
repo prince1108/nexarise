@@ -87,7 +87,7 @@ public class MqttGatewayClientTest extends AbstractContainerTest {
         };
         handlerExecutor.init();
 
-        testRestClient.login("tenant@thingsboard.org", "tenant");
+        testRestClient.login("tenant@nexarise.ai", "tenant");
         gatewayDevice = testRestClient.postDevice("", defaultGatewayPrototype());
         DeviceCredentials gatewayDeviceCredentials = testRestClient.getDeviceCredentialsByDeviceId(gatewayDevice.getId());
 

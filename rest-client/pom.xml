@@ -21,7 +21,7 @@
     <parent>
         <groupId>org.thingsboard</groupId>
         <version>4.3.0-SNAPSHOT</version>
-        <artifactId>thingsboard</artifactId>
+        <artifactId>nexarise</artifactId>
     </parent>
     <artifactId>rest-client</artifactId>
     <packaging>jar</packaging>

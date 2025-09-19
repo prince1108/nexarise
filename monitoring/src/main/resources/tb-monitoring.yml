@@ -21,7 +21,7 @@ monitoring:
     # Base REST API url, https://DOMAIN by default
     base_url: '${REST_BASE_URL:https://${monitoring.domain}}'
     # Authentication username
-    username: '${REST_AUTH_USERNAME:tenant@thingsboard.org}'
+    username: '${REST_AUTH_USERNAME:tenant@nexarise.ai}'
     # Authentication password
     password: '${REST_AUTH_PASSWORD:tenant}'
     # REST request timeout in milliseconds

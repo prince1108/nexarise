@@ -574,7 +574,7 @@ public class AlarmControllerTest extends AbstractControllerTest {
         User user = new User();
         user.setAuthority(Authority.TENANT_ADMIN);
         user.setTenantId(tenantId);
-        user.setEmail("tenantForAssign@thingsboard.org");
+        user.setEmail("tenantForAssign@nexarise.ai");
         User savedUser = createUser(user, "password");
 
         Device device = createDevice("Different tenant device", "default", "differentTenantTest");
@@ -624,7 +624,7 @@ public class AlarmControllerTest extends AbstractControllerTest {
         User user = new User();
         user.setAuthority(Authority.TENANT_ADMIN);
         user.setTenantId(tenantId);
-        user.setEmail("tenantForAssign@thingsboard.org");
+        user.setEmail("tenantForAssign@nexarise.ai");
         User savedUser = createUser(user, "password");
 
         Device device = createDevice("Different tenant device", "default", "differentTenantTest");
