@@ -14,7 +14,7 @@
 /// limitations under the License.
 ///
 
-import { RuleNodeType } from '@shared/models/rule-node.models';
+import {RuleNodeType} from '@shared/models/rule-node.models';
 
 export enum ComponentType {
   ENRICHMENT = 'ENRICHMENT',
@@ -22,7 +22,8 @@ export enum ComponentType {
   TRANSFORMATION = 'TRANSFORMATION',
   ACTION = 'ACTION',
   EXTERNAL = 'EXTERNAL',
-  FLOW = 'FLOW'
+  FLOW = 'FLOW',
+  NEXAMACHINE = 'NEXAMACHINE'
 }
 
 export enum ComponentScope {

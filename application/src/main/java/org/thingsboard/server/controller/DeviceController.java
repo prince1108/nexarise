@@ -29,15 +29,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.async.DeferredResult;
 import org.thingsboard.server.common.data.ClaimRequest;
 import org.thingsboard.server.common.data.Customer;
@@ -295,6 +287,18 @@ public class DeviceController extends BaseController {
         return tbDeviceService.getDeviceCredentialsByDeviceId(device, getCurrentUser());
     }
 
+
+    @PreAuthorize("hasAuthority('TENANT_ADMIN')")
+    @RequestMapping(value = "/devicelist", method = RequestMethod.GET)
+    public List<Device> getDevices() throws ThingsboardException {
+        // Fetch first 100 devices as an example
+        PageLink pageLink = new PageLink(100);
+        PageData<Device> devicesPage = deviceService.findDevicesByTenantId(
+                getCurrentUser().getTenantId(),
+                pageLink
+        );
+        return devicesPage.getData();
+    }
     @ApiOperation(value = "Update device credentials (updateDeviceCredentials)",
             notes = "During device creation, platform generates random 'ACCESS_TOKEN' credentials. \" +\n" +
                     "Use this method to update the device credentials. First use 'getDeviceCredentialsByDeviceId' to get the credentials id and value.\n" +

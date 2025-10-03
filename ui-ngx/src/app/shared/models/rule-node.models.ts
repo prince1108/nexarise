@@ -14,19 +14,19 @@
 /// limitations under the License.
 ///
 
-import { BaseData } from '@shared/models/base-data';
-import { RuleChainId } from '@shared/models/id/rule-chain-id';
-import { RuleNodeId } from '@shared/models/id/rule-node-id';
-import { ComponentDescriptor } from '@shared/models/component-descriptor.models';
-import { FcEdge, FcNode } from 'ngx-flowchart';
-import { Observable } from 'rxjs';
-import { PageComponent } from '@shared/components/page.component';
-import { AfterViewInit, DestroyRef, Directive, EventEmitter, inject, OnInit } from '@angular/core';
-import { AbstractControl, UntypedFormGroup } from '@angular/forms';
-import { RuleChainType } from '@shared/models/rule-chain.models';
-import { DebugRuleNodeEventBody } from '@shared/models/event.models';
-import { EntityTestScriptResult, HasEntityDebugSettings } from '@shared/models/entity.models';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import {BaseData} from '@shared/models/base-data';
+import {RuleChainId} from '@shared/models/id/rule-chain-id';
+import {RuleNodeId} from '@shared/models/id/rule-node-id';
+import {ComponentDescriptor} from '@shared/models/component-descriptor.models';
+import {FcEdge, FcNode} from 'ngx-flowchart';
+import {Observable} from 'rxjs';
+import {PageComponent} from '@shared/components/page.component';
+import {AfterViewInit, DestroyRef, Directive, EventEmitter, inject, OnInit} from '@angular/core';
+import {AbstractControl, UntypedFormGroup} from '@angular/forms';
+import {RuleChainType} from '@shared/models/rule-chain.models';
+import {DebugRuleNodeEventBody} from '@shared/models/event.models';
+import {EntityTestScriptResult, HasEntityDebugSettings} from '@shared/models/entity.models';
+import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 
 export interface RuleNodeConfiguration {
   [key: string]: any;
@@ -79,15 +79,17 @@ export interface IRuleNodeConfigurationComponent {
   ruleChainType: RuleChainType;
   configuration: RuleNodeConfiguration;
   configurationChanged: Observable<RuleNodeConfiguration>;
+
   validate();
-  testScript? (debugEventBody?: DebugRuleNodeEventBody);
+
+  testScript?(debugEventBody?: DebugRuleNodeEventBody);
+
   [key: string]: any;
 }
 
 @Directive()
 // eslint-disable-next-line @angular-eslint/directive-class-suffix
-export abstract class RuleNodeConfigurationComponent extends PageComponent implements
-  IRuleNodeConfigurationComponent, OnInit, AfterViewInit {
+export abstract class RuleNodeConfigurationComponent extends PageComponent implements IRuleNodeConfigurationComponent, OnInit, AfterViewInit {
 
   ruleNodeId: string;
 
@@ -136,7 +138,8 @@ export abstract class RuleNodeConfigurationComponent extends PageComponent imple
     super();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   ngAfterViewInit(): void {
     setTimeout(() => {
@@ -205,7 +208,8 @@ export abstract class RuleNodeConfigurationComponent extends PageComponent imple
     return this.configForm().valid;
   }
 
-  protected onValidate() {}
+  protected onValidate() {
+  }
 
   protected abstract configForm(): UntypedFormGroup;
 
@@ -221,6 +225,7 @@ export enum RuleNodeType {
   ACTION = 'ACTION',
   EXTERNAL = 'EXTERNAL',
   FLOW = 'FLOW',
+  NEXAMACHINE = 'NEXAMACHINE',
   UNKNOWN = 'UNKNOWN',
   INPUT = 'INPUT'
 }
@@ -232,6 +237,7 @@ export const ruleNodeTypesLibrary = [
   RuleNodeType.ACTION,
   RuleNodeType.EXTERNAL,
   RuleNodeType.FLOW,
+  RuleNodeType.NEXAMACHINE,
 ];
 
 export interface RuleNodeTypeDescriptor {
@@ -306,6 +312,16 @@ export const ruleNodeTypeDescriptors = new Map<RuleNodeType, RuleNodeTypeDescrip
       }
     ],
     [
+      RuleNodeType.NEXAMACHINE,
+      {
+        value: RuleNodeType.NEXAMACHINE,
+        name: "Machine Learning",
+        details: "This is basically to pridict incomin data from gateway.",
+        nodeClass: "tb-flow-type",
+        icon: "settings_ethernet"
+      }
+    ],
+    [
       RuleNodeType.INPUT,
       {
         value: RuleNodeType.INPUT,
@@ -368,7 +384,7 @@ export interface TestScriptInputParams {
   scriptType: string;
   argNames: string[];
   msg: string;
-  metadata: {[key: string]: string};
+  metadata: { [key: string]: string };
   msgType: string;
 }
 
@@ -520,6 +536,7 @@ const ruleNodeClazzHelpLinkMap = {
   'org.thingsboard.rule.engine.rest.TbSendRestApiCallReplyNode': 'ruleNodeRestCallReply',
   'org.thingsboard.rule.engine.notification.TbNotificationNode': 'ruleNodeSendNotification',
   'org.thingsboard.rule.engine.notification.TbSlackNode': 'ruleNodeSendSlack',
+  'org.thingsboard.rule.engine.custom.MyCustomNode': 'ruleNodeMyCustom',
 };
 
 export function getRuleNodeHelpLink(component: RuleNodeComponentDescriptor): string {

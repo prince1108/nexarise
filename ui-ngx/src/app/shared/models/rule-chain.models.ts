@@ -59,7 +59,8 @@ export const ruleNodeTypeComponentTypes: ComponentType[] =
     ComponentType.TRANSFORMATION,
     ComponentType.ACTION,
     ComponentType.EXTERNAL,
-    ComponentType.FLOW
+    ComponentType.FLOW,
+    ComponentType.NEXAMACHINE,
   ];
 
 export const unknownNodeComponent: RuleNodeComponentDescriptor = {
